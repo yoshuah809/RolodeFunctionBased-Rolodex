@@ -9,9 +9,10 @@ const App = () => {
   const [filteredMonsters, setFilteredMonsters] = useState(monsters);
   const [searchField, setSearchField] = useState("");
 
+  console.log("render");
   const onSearchChange = (e) => {
     const searchFieldstr = e.target.value;
-    setSearchField(searchFieldstr);
+    setSearchField(searchFieldstr.toLowerCase());
   };
 
   const fetchData = () => {
